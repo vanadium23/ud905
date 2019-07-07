@@ -48,6 +48,8 @@ class CategoryTile extends StatelessWidget {
           borderRadius: _borderRadius,
           highlightColor: category.color['highlight'],
           splashColor: category.color['splash'],
+          // We can use either the () => function() or the () { function(); }
+          // syntax.
           onTap: () => onTap(category),
           child: Padding(
             padding: EdgeInsets.all(8.0),
