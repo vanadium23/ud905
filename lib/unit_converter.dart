@@ -2,6 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+// TODO: Import necessary packages
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -98,6 +101,8 @@ class _UnitConverterState extends State<UnitConverter> {
     return outputNum;
   }
 
+  // TODO: If in the Currency [Category], call the API to retrieve the conversion.
+  // Remember, the API call is an async function.
   void _updateConversion() {
     setState(() {
       _convertedValue =

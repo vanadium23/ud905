@@ -7,6 +7,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
+// TODO: Import necessary package
 import 'backdrop.dart';
 import 'category.dart';
 import 'category_tile.dart';
@@ -87,8 +88,11 @@ class _CategoryRouteState extends State<CategoryRoute> {
     super.didChangeDependencies();
     // We have static unit conversions located in our
     // assets/data/regular_units.json
+    // and we want to also obtain up-to-date Currency conversions from the web
+    // We only want to load our data in once
     if (_categories.isEmpty) {
       await _retrieveLocalCategories();
+      // TODO: Call _retrieveApiCategory() here
     }
   }
 
@@ -123,6 +127,10 @@ class _CategoryRouteState extends State<CategoryRoute> {
       categoryIndex += 1;
     });
   }
+
+  // TODO: Add the Currency Category retrieved from the API, to our _categories
+  /// Retrieves a [Category] and its [Unit]s from an API on the web
+  Future<void> _retrieveApiCategory() async {}
 
   /// Function to call when a [Category] is tapped.
   void _onCategoryTap(Category category) {
